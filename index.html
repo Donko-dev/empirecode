@@ -446,6 +446,39 @@
   .quote-card p{ position:relative; z-index:1; margin:0; }
   .quote-card footer{ margin-top:16px; font-style:normal; color: var(--text); font-weight:600; font-size:0.85rem; }
 
+  /* ---------- SECTION PROMO : KALCUL & DONKO ADS ---------- */
+  .promo-banner{
+    position:relative; padding: 46px 30px; border-radius: var(--radius);
+    background: linear-gradient(135deg, rgba(232,169,61,0.14), rgba(193,68,14,0.14));
+    border: 2px solid rgba(232,169,61,0.4);
+    text-align:center; overflow:hidden;
+    animation: promo-glow 2.4s ease-in-out infinite;
+  }
+  @keyframes promo-glow{
+    0%,100%{ box-shadow: 0 0 0 0 rgba(232,169,61,0.45), 0 0 30px 0 rgba(232,169,61,0.12); border-color: rgba(232,169,61,0.4); }
+    50%{ box-shadow: 0 0 0 12px rgba(232,169,61,0), 0 0 60px 8px rgba(232,169,61,0.4); border-color: rgba(232,169,61,0.95); }
+  }
+  .promo-banner .eyebrow{ justify-content:center; }
+  .promo-banner h2{ margin: 14px 0 12px; font-size: clamp(1.5rem, 3.4vw, 2.1rem); }
+  .promo-banner > .container-inner-desc, .promo-banner p.promo-desc{
+    color: var(--text-dim); max-width:640px; margin:0 auto 32px; font-size:0.98rem;
+  }
+  .promo-grid{
+    display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap:20px; margin-bottom: 30px; text-align:left;
+  }
+  .promo-card{
+    background: rgba(255,255,255,0.06); border:1px solid rgba(232,169,61,0.3);
+    border-radius: 16px; padding:26px; display:flex; flex-direction:column; gap:12px;
+  }
+  .promo-icon{ font-size:2rem; }
+  .promo-card h3{ font-size:1.15rem; }
+  .promo-card p{ color: var(--text-dim); font-size:0.88rem; margin:0; flex-grow:1; }
+  .promo-tag{
+    font-weight:700; font-size:1rem; color: var(--or); margin:0;
+    display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap;
+  }
+
   /* ---------- CONTACT / FOOTER ---------- */
   footer.site-footer{
     padding: 70px 0 30px;
@@ -629,6 +662,7 @@
       <a href="#ecosysteme" class="nav-link" data-i18n="nav_eco">Écosystème</a>
       <a href="#blockchain" class="nav-link" data-i18n="nav_chain">Blockchain</a>
       <a href="#certifications" class="nav-link" data-i18n="nav_cert">Certifications</a>
+      <a href="#logiciels" class="nav-link" data-i18n="nav_apps">Logiciels</a>
       <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
       <span class="status-badge"><span class="status-dot"></span> <span data-i18n="status_badge">Disponible pour contrats</span></span>
       <div class="nav-controls">
@@ -780,6 +814,34 @@
 </section>
 
 <!-- ============ FOOTER / CONTACT ============ -->
+<!-- ============ PROMO : KALCUL & DONKO ADS ============ -->
+<section id="logiciels">
+  <div class="container">
+    <div class="promo-banner reveal">
+      <span class="eyebrow" data-i18n="promo_eyebrow">Opportunité exclusive</span>
+      <h2 data-i18n="promo_title">Vos outils de gestion &amp; de visibilité</h2>
+      <p class="promo-desc" data-i18n="promo_desc">Gérez vos factures, devis, stocks et marges sans dépendre d'un serveur ni d'une connexion internet. Publiez vos produits au grand public en toute simplicité. Deux logiciels conçus pour les commerçants, artisans et entrepreneurs.</p>
+
+      <div class="promo-grid">
+        <div class="promo-card">
+          <div class="promo-icon">🧾</div>
+          <h3>Kalcul</h3>
+          <p>Gestion de stock, caisse, facturation, devis et calcul de marges. 100% hors connexion, sans serveur, sans base de données distante — vos données restent exclusivement sur votre appareil.</p>
+          <a class="btn btn-gold" href="https://donko-dev.github.io/Kalcul-pro/" target="_blank" rel="noopener noreferrer">Tester Kalcul ↗</a>
+        </div>
+        <div class="promo-card">
+          <div class="promo-icon">📣</div>
+          <h3>DONKO ADS</h3>
+          <p>Annuaire d'annonces pour publier votre boutique et vos produits à l'échelle mondiale. Publiez en un clic et gagnez en visibilité, en toute transparence et sécurité.</p>
+          <a class="btn btn-gold" href="https://donko-dev.github.io/DONKO-ADS/" target="_blank" rel="noopener noreferrer">Explorer DONKO ADS ↗</a>
+        </div>
+      </div>
+
+      <p class="promo-tag" data-i18n="promo_tag">🏰 Une opportunité en or, une forteresse pour les entreprises, commerçants et artisans.</p>
+    </div>
+  </div>
+</section>
+
 <footer class="site-footer" id="contact">
   <div class="container">
 
@@ -1023,6 +1085,7 @@
     fr: {
       nav_home:"Accueil", nav_eco:"Écosystème", nav_chain:"Blockchain", nav_cert:"Certifications", nav_contact:"Contact",
       brand_name:"EMPIRE DONKO", hero_prefix:"L'EMPIRE DONKO — ", hero_accent:"Architecture Systèmes & Finance Décentralisée",
+      nav_apps:"Logiciels", promo_eyebrow:"Opportunité exclusive", promo_title:"Vos outils de gestion & de visibilité", promo_desc:"Gérez vos factures, devis, stocks et marges sans dépendre d'un serveur ni d'une connexion internet. Publiez vos produits au grand public en toute simplicité. Deux logiciels conçus pour les commerçants, artisans et entrepreneurs.", promo_tag:"🏰 Une opportunité en or, une forteresse pour les entreprises, commerçants et artisans.",
       status_badge:"Disponible pour contrats", status_badge2:"Disponible pour missions",
       hero_eyebrow:"Architecte Systèmes · Web3 · Automatisation IA",
       hero_lead:"Je conçois des outils souverains, déconnectés, robustes et optimisés localement — des systèmes qui fonctionnent sans dépendre d'un serveur, d'une connexion ou d'une base de données externe. Ingénierie logicielle de pointe, rencontre finance décentralisée.",
@@ -1049,6 +1112,7 @@
     en: {
       nav_home:"Home", nav_eco:"Ecosystem", nav_chain:"Blockchain", nav_cert:"Certifications", nav_contact:"Contact",
       brand_name:"EMPIRE DONKO", hero_prefix:"THE DONKO EMPIRE — ", hero_accent:"Systems Architecture & Decentralized Finance",
+      nav_apps:"Software", promo_eyebrow:"Exclusive opportunity", promo_title:"Your management & visibility tools", promo_desc:"Manage your invoices, quotes, stock and margins without depending on a server or an internet connection. Publish your products to the public with ease. Two tools built for shop owners, artisans and entrepreneurs.", promo_tag:"🏰 A golden opportunity, a fortress for businesses, shop owners and artisans.",
       status_badge:"Available for contracts", status_badge2:"Available for assignments",
       hero_eyebrow:"Systems Architect · Web3 · AI Automation",
       hero_lead:"I design sovereign, offline-first, robust tools optimized to run locally — systems that work without depending on a server, a connection, or an external database. Cutting-edge software engineering meets decentralized finance.",
@@ -1075,6 +1139,7 @@
     de: {
       nav_home:"Start", nav_eco:"Ökosystem", nav_chain:"Blockchain", nav_cert:"Zertifizierungen", nav_contact:"Kontakt",
       brand_name:"EMPIRE DONKO", hero_prefix:"DAS DONKO EMPIRE — ", hero_accent:"Systemarchitektur & Dezentrale Finanzen",
+      nav_apps:"Software", promo_eyebrow:"Exklusive Gelegenheit", promo_title:"Ihre Werkzeuge für Verwaltung & Sichtbarkeit", promo_desc:"Verwalten Sie Rechnungen, Angebote, Lagerbestand und Margen ohne Server oder Internetverbindung. Veröffentlichen Sie Ihre Produkte ganz einfach für die Öffentlichkeit. Zwei Tools für Händler, Handwerker und Unternehmer.", promo_tag:"🏰 Eine goldene Gelegenheit, eine Festung für Unternehmen, Händler und Handwerker.",
       status_badge:"Verfügbar für Aufträge", status_badge2:"Verfügbar für Projekte",
       hero_eyebrow:"Systemarchitekt · Web3 · KI-Automatisierung",
       hero_lead:"Ich entwickle souveräne, offline-fähige, robuste und lokal optimierte Werkzeuge — Systeme, die ohne Server, Verbindung oder externe Datenbank funktionieren. Modernste Softwaretechnik trifft dezentrale Finanzen.",
@@ -1101,6 +1166,7 @@
     es: {
       nav_home:"Inicio", nav_eco:"Ecosistema", nav_chain:"Blockchain", nav_cert:"Certificaciones", nav_contact:"Contacto",
       brand_name:"EMPIRE DONKO", hero_prefix:"EL IMPERIO DONKO — ", hero_accent:"Arquitectura de Sistemas y Finanzas Descentralizadas",
+      nav_apps:"Software", promo_eyebrow:"Oportunidad exclusiva", promo_title:"Tus herramientas de gestión y visibilidad", promo_desc:"Gestiona tus facturas, presupuestos, inventario y márgenes sin depender de un servidor ni de conexión a internet. Publica tus productos al público fácilmente. Dos herramientas pensadas para comerciantes, artesanos y emprendedores.", promo_tag:"🏰 Una oportunidad de oro, una fortaleza para empresas, comerciantes y artesanos.",
       status_badge:"Disponible para contratos", status_badge2:"Disponible para proyectos",
       hero_eyebrow:"Arquitecto de Sistemas · Web3 · Automatización con IA",
       hero_lead:"Diseño herramientas soberanas, desconectadas, robustas y optimizadas localmente — sistemas que funcionan sin depender de un servidor, una conexión o una base de datos externa. Ingeniería de software de vanguardia al encuentro de las finanzas descentralizadas.",
@@ -1127,6 +1193,7 @@
     zh: {
       nav_home:"首页", nav_eco:"生态系统", nav_chain:"区块链", nav_cert:"认证", nav_contact:"联系",
       brand_name:"EMPIRE DONKO", hero_prefix:"DONKO 帝国 — ", hero_accent:"系统架构与去中心化金融",
+      nav_apps:"软件", promo_eyebrow:"独家机遇", promo_title:"您的管理与曝光工具", promo_desc:"无需依赖服务器或互联网连接即可管理发票、报价、库存和利润。轻松向公众发布您的产品。两款专为商家、工匠和企业家打造的工具。", promo_tag:"🏰 一个黄金机遇，为企业、商家和工匠打造的坚固堡垒。",
       status_badge:"接受合同合作", status_badge2:"接受项目委托",
       hero_eyebrow:"系统架构师 · Web3 · AI自动化",
       hero_lead:"我设计自主可控、可离线运行、稳健且经过本地优化的工具——无需依赖服务器、网络连接或外部数据库即可运行的系统。前沿软件工程与去中心化金融的结合。",
@@ -1153,6 +1220,7 @@
     ru: {
       nav_home:"Главная", nav_eco:"Экосистема", nav_chain:"Блокчейн", nav_cert:"Сертификаты", nav_contact:"Контакты",
       brand_name:"EMPIRE DONKO", hero_prefix:"ИМПЕРИЯ DONKO — ", hero_accent:"Архитектура систем и децентрализованные финансы",
+      nav_apps:"ПО", promo_eyebrow:"Эксклюзивная возможность", promo_title:"Ваши инструменты управления и продвижения", promo_desc:"Управляйте счетами, сметами, запасами и наценками без сервера и подключения к интернету. Легко публикуйте товары для широкой аудитории. Два инструмента для торговцев, ремесленников и предпринимателей.", promo_tag:"🏰 Золотая возможность, крепость для предприятий, торговцев и ремесленников.",
       status_badge:"Открыт для контрактов", status_badge2:"Открыт для проектов",
       hero_eyebrow:"Системный архитектор · Web3 · Автоматизация ИИ",
       hero_lead:"Я создаю суверенные, автономные, надёжные и локально оптимизированные инструменты — системы, работающие без сервера, подключения или внешней базы данных. Передовая инженерия ПО на стыке с децентрализованными финансами.",
@@ -1179,6 +1247,7 @@
     tr: {
       nav_home:"Anasayfa", nav_eco:"Ekosistem", nav_chain:"Blockchain", nav_cert:"Sertifikalar", nav_contact:"İletişim",
       brand_name:"EMPIRE DONKO", hero_prefix:"DONKO İMPARATORLUĞU — ", hero_accent:"Sistem Mimarisi ve Merkeziyetsiz Finans",
+      nav_apps:"Yazılımlar", promo_eyebrow:"Özel fırsat", promo_title:"Yönetim ve görünürlük araçlarınız", promo_desc:"Sunucuya veya internet bağlantısına ihtiyaç duymadan faturalarınızı, tekliflerinizi, stoklarınızı ve kâr marjlarınızı yönetin. Ürünlerinizi kolayca halka açık şekilde yayınlayın. Esnaf, zanaatkâr ve girişimciler için iki araç.", promo_tag:"🏰 Altın bir fırsat, işletmeler, esnaflar ve zanaatkârlar için bir kale.",
       status_badge:"Sözleşmelere açık", status_badge2:"Projelere açık",
       hero_eyebrow:"Sistem Mimarı · Web3 · Yapay Zeka Otomasyonu",
       hero_lead:"Bağımsız, çevrimdışı çalışabilen, sağlam ve yerel olarak optimize edilmiş araçlar tasarlıyorum — sunucuya, bağlantıya veya harici veritabanına ihtiyaç duymadan çalışan sistemler. İleri düzey yazılım mühendisliği, merkeziyetsiz finansla buluşuyor.",
@@ -1205,6 +1274,7 @@
     ar: {
       nav_home:"الرئيسية", nav_eco:"النظام البيئي", nav_chain:"البلوكتشين", nav_cert:"الشهادات", nav_contact:"اتصل بنا",
       brand_name:"EMPIRE DONKO", hero_prefix:"إمبراطورية دونكو — ", hero_accent:"هندسة الأنظمة والتمويل اللامركزي",
+      nav_apps:"البرمجيات", promo_eyebrow:"فرصة حصرية", promo_title:"أدواتك للإدارة والظهور", promo_desc:"أدر فواتيرك وعروض أسعارك ومخزونك وهوامش ربحك دون الاعتماد على خادم أو اتصال بالإنترنت. انشر منتجاتك للجمهور بكل سهولة. أداتان مصممتان للتجار والحرفيين ورواد الأعمال.", promo_tag:"🏰 فرصة ذهبية، وحصن للشركات والتجار والحرفيين.",
       status_badge:"متاح للعقود", status_badge2:"متاح للمشاريع",
       hero_eyebrow:"مهندس أنظمة · Web3 · أتمتة بالذكاء الاصطناعي",
       hero_lead:"أصمم أدوات سيادية، تعمل دون اتصال، قوية ومُحسَّنة محليًا — أنظمة تعمل دون الاعتماد على خادم أو اتصال أو قاعدة بيانات خارجية. هندسة برمجيات متطورة تلتقي بالتمويل اللامركزي.",
